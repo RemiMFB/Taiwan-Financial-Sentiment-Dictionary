@@ -1,0 +1,59 @@
+{
+  "columns": [
+    {
+      "name": "term",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "required": true,
+      "allowed": [
+        "positive",
+        "negative",
+        "uncertain",
+        "litigious",
+        "constraining",
+        "superfluous",
+        "stopword"
+      ]
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "added_in_version",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "deprecated_in_version",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "deprecated",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "alias_of",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "encoding": "utf-8"
+}

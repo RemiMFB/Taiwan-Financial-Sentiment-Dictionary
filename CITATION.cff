@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Taiwan Financial News Sentiment Lexicon"
+authors:
+  - family-names: Huang
+    given-names: Remi
+version: "2025.09.0"
+date-released: 2025-09-05
+doi: ""  # Fill after Zenodo issues a DOI
+preferred-citation:
+  type: dataset
+  title: "Taiwan Financial News Sentiment Lexicon"
+  authors:
+    - family-names: Huang
+      given-names: Remi
+  year: 2025
+  notes: "Versioned dataset. Please cite the exact version you used."
