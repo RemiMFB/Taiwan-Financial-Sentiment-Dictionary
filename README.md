@@ -1,6 +1,17 @@
 # Taiwan Financial Sentiment Dictionary
 
-This repository publishes an open, versioned dictionary for sentiment analysis of Traditional Chinese financial news in Taiwan. It includes the lexicon in Excel format (XLSX), a clear versioning and release policy, quality-assurance checks, and documentation of the construction workflow (LLM labeling → PMI filtering → human or LLM validation).
+This repository provides a dictionary for sentiment analysis of Traditional Chinese financial news in Taiwan. The lexicon was constructed using data derived from major Taiwanese news sources.
+Features:
+ - Lexicon in Excel format (XLSX).
+ - Clear versioning and release policy.
+ - Quality assurance checks.
+ - Documentation of the construction workflow (LLM labeling → PMI filtering → human or LLM validation).
+
+The full paper, entitled 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, detailing this work, can be downloaded from: https://remi.ctmnthu.com/portfolio-archive/financial-dictionary/  
+
+Paper Abstract:
+ 
+本文旨在利用台灣的財經新聞文本，建立分類模型以篩選出台灣慣用的新聞字詞，並透過大型語言模型 (LLMs) 的協助，對這些新聞詞彙進行檢視、擴充以及情緒分類的確認。不同於既有文獻，本文還針對「景氣」、「貨幣政策」、「利率」等特定財經議題建構分類字詞，以填補這方面的不足。經過一系列的篩選，我們選出 7,814 個財經情緒詞彙；經過比對，有 1/4 以上的財經慣用詞彙並未收錄於現有的情緒字典中。若以中央銀行公佈的會議新聞稿為樣本外的文本，以 LLMs 的分類結果為標準，比較不同字典的情緒分類精確度可以發現，本文的財經情緒字典在運算時間與成本上較 LLMs 更具優勢，而在分類的精確度雖不及 LLMs，確優於現有的情緒字典。此外，我們也發現，依本文所編製的情緒字典來建構情緒指標，該指標對許多台灣總體經濟變數有顯著的解釋能力與預測力，其表現均優於現有字典所建構的指標內容。最後，我們也觀察到，依據不同議題所建構的分類詞彙與情緒指標，能更細緻捕捉文本中的語意差異，進一步提升文字資料轉化為數據的內涵。
 
 ## Quick start
 - Download the current release from the **Releases** page once you publish this repo.
@@ -15,7 +26,7 @@ This repository publishes an open, versioned dictionary for sentiment analysis o
 
 ## Versioning & release schedule
 - **Scheme**: `2025.06.01` (`YYYY.MM.PATCH`). Year–month reflect the release window; PATCH increments for hotfixes that do not change definitions.
-- **Schedule**: Annual releases (December). Event-driven hotfixes are allowed.
+- **Schedule**: Annual releases (on December). Event-driven hotfixes are allowed.
 - **Frozen archives**: Every release is tagged and published on GitHub Releases. Users can cite a specific version for replication.
 - **Changelog**: See `CHANGELOG.md` for human-readable changes.
 
