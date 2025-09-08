@@ -20,7 +20,8 @@ This repository publishes an open, versioned dictionary for sentiment analysis o
 - **Changelog**: See `CHANGELOG.md` for human-readable changes.
 
 ## Citation & DOI
-- Add a DOI by connecting this GitHub repository to Zenodo and creating a release. The DOI will resolve to a snapshot of that version. Also provide citation metadata in `CITATION.cff`.
+-  [![DOI](https://zenodo.org/badge/1052554974.svg)](https://doi.org/10.5281/zenodo.17076771
+Also provide citation metadata in `CITATION.cff`.
 
 ## Licenses
 - **Code**: MIT License (see `LICENSE-CODE`).

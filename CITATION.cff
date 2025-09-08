@@ -1,16 +1,40 @@
 cff-version: 1.2.0
-title: "Taiwan Financial News Sentiment Lexicon"
+message: "If you use this dataset or dictionaries, please cite it as below."
+title: "Taiwanese Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Construction and Evaluation"
+title-translated:
+  zh: "台灣財經情緒字典與議題分類字詞之編製與應用：大型語言模型之協作與分類評估 "
 authors:
+  - family-names: 黃
+    given-names:  裕烈
   - family-names: Huang
-    given-names: Remi
+    given-names: Yu-Lieh
 version: "2025.09.0"
-date-released: 2025-09-05
-doi: ""  # Fill after Zenodo issues a DOI
-preferred-citation:
-  type: dataset
-  title: "Taiwan Financial News Sentiment Lexicon"
-  authors:
-    - family-names: Huang
-      given-names: Remi
-  year: 2025
-  notes: "Versioned dataset. Please cite the exact version you used."
+date-released: 2025-09-01
+doi: 10.5281/zenodo.17076771
+keywords:
+  - Financial Sentiment Dictionary
+  - Large Language Models
+  - LLM
+  - Taiwan
+  - Topic-Classification
+  - 財經情緒字典
+  - 議題分類字詞
+license: CC-BY-4.0
+repository-code: "https://github.com/<your-repo>"
+url: "https://doi.org/10.5281/zenodo.17076771"
+abstract: |
+  This study aims to leverage Taiwanese financial news texts to develop classification models that identify commonly used news terms. 
+  In addition, large language models (LLMs) are employed to assist in reviewing, expanding, and verifying the sentiment classification of these terms. 
+  Unlike existing studies, this paper constructs classification lexicons for specific financial topics, such as economic conditions, monetary policy, 
+  and interest rates, thereby addressing a gap in the literature. 
+  Through a series of filtering processes, we selected 7,814 financial sentiment terms. 
+  Comparison with existing sentiment dictionaries reveals that more than one-quarter of these commonly used financial terms are not included in current lexicons. 
+  Using central bank press releases as out-of-sample texts and treating LLMs' classification results as the benchmark, 
+  we compare the sentiment classification accuracy of different lexicons. 
+  The results indicate that the financial sentiment lexicon developed in this study is more advantageous in terms of computational time and cost compared to LLMs. 
+  Although its classification accuracy is slightly lower than that of LLMs, 
+  it surpasses existing sentiment dictionaries. 
+  Furthermore, sentiment indicators constructed using the lexicon developed in this study demonstrate significant explanatory and predictive power for various macroeconomic variables in Taiwan, 
+  outperforming indicators derived from existing sentiment dictionaries. 
+  Finally, we observe that topic-specific classification lexicons and sentiment indicators can capture semantic nuances in texts more precisely, 
+  thereby enhancing the informational content derived from textual data.
