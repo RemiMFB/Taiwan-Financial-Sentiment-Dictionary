@@ -1,13 +1,14 @@
 # Taiwan Financial Sentiment Dictionary
 
-This repository provides a dictionary for sentiment analysis of Traditional Chinese financial news in Taiwan. The lexicon was constructed using data derived from major Taiwanese news sources.
-Features:
- - Lexicon in Excel format (XLSX).
- - Clear versioning and release policy.
- - Quality assurance checks.
- - Documentation of the construction workflow (LLM labeling → PMI filtering → human or LLM validation).
+This repository provides a dictionary for sentiment analysis of Traditional Chinese financial news in Taiwan. The lexicons were constructed using data derived from major Taiwanese news sources.
 
-The full paper, entitled 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, detailing this work, can be downloaded from: https://remi.ctmnthu.com/portfolio-archive/financial-dictionary/  
+Features:
+ - Comprehensive financial sentiment dictionary and topic-classification lexicons.
+ - Clear versioning and release policy.
+ - Documented quality assurance checks.
+ - Detailed documentation of the construction workflow (LLM labeling → PMI filtering → human or LLM validation).
+
+The full paper, entitled "台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估," by Yu-Lieh Huang (黃裕烈), detailing this work, can be downloaded from: https://remi.ctmnthu.com/portfolio-archive/financial-dictionary/  
 
 Paper Abstract:
  
@@ -32,6 +33,8 @@ Paper Abstract:
 
 ## Citation & DOI
 -  [![DOI](https://zenodo.org/badge/1052554974.svg)](https://doi.org/10.5281/zenodo.17076771
+-  黃裕烈 (2025), 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, 論文手稿.
+
 Also provide citation metadata in `CITATION.cff`.
 
 ## Licenses
