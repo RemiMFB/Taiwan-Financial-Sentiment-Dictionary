@@ -1,4 +1,4 @@
-# Taiwan Financial Sentiment Lexicon
+# Taiwan Financial Sentiment Dictionary
 
 This repository publishes an open, versioned dictionary for sentiment analysis of Traditional Chinese financial news in Taiwan. It includes the lexicon in Excel format (XLSX), a clear versioning and release policy, quality-assurance checks, and documentation of the construction workflow (LLM labeling → PMI filtering → human or LLM validation).
 
@@ -30,10 +30,10 @@ Also provide citation metadata in `CITATION.cff`.
 ## Construction workflow
 ```mermaid
 flowchart LR
-  A[LLM labeling: propose candidates] --> B[PMI filtering + heuristics]
-  B --> C[Human review & policy checks]
-  C --> D[Validation metrics (accuracy, F1, coverage)]
-  D --> E[Release + tag + changelog]
+  A(LLM labeling: propose candidates) --> B(PMI filtering + heuristics)
+  B --> C(Human review & policy checks)
+  C --> D(Validation metrics: accuracy / F1)
+  D --> E(Release + tag + changelog)
 ```
 - Full details are in `WORKFLOW.md`, including checkpoints, error metrics, and QA steps.
 
