@@ -45,8 +45,8 @@ Also provide citation metadata in `CITATION.cff`.
 ## Construction workflow
 ```mermaid
 flowchart LR
-  A(LLM labeling: propose candidates) --> B(PMI filtering + heuristics)
-  B --> C(Human review & policy checks)
+  A(LLM or Model labeling: propose candidates) --> B(PMI filtering + LLMs confirmed)
+  B --> C(Human or LLMs review & policy checks)
   C --> D(Validation metrics: accuracy / F1)
   D --> E(Release + tag + changelog)
 ```
