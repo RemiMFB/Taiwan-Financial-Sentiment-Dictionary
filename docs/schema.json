@@ -1,53 +1,28 @@
 {
   "columns": [
     {
-      "name": "term",
+      "name": "word",
       "type": "string",
       "required": true
     },
     {
-      "name": "label",
+      "name": "word",
       "type": "string",
       "required": true,
       "allowed": [
         "positive",
-        "negative",
-        "uncertain",
-        "litigious",
-        "constraining",
-        "superfluous",
-        "stopword"
-      ]
+        "negative"
+             ]
     },
     {
-      "name": "category",
-      "type": "string",
+      "name": "Count",
+      "type": "numeric",
       "required": true
     },
     {
-      "name": "source",
-      "type": "string",
+      "name": "Article",
+      "type": "numeric",
       "required": true
-    },
-    {
-      "name": "added_in_version",
-      "type": "string",
-      "required": true
-    },
-    {
-      "name": "deprecated_in_version",
-      "type": "string",
-      "required": false
-    },
-    {
-      "name": "deprecated",
-      "type": "boolean",
-      "required": true
-    },
-    {
-      "name": "alias_of",
-      "type": "string",
-      "required": false
     },
     {
       "name": "notes",
@@ -55,5 +30,5 @@
       "required": false
     }
   ],
-  "encoding": "utf-8"
+  "encoding": "big-5"
 }
