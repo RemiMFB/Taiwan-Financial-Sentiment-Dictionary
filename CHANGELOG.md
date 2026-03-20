@@ -9,3 +9,7 @@ All notable changes to this project will be documented in this file.
 
 ## [2025.09.02] - 2025-09-24
 - Modified policies and documentation.
+
+## [2026.03.20] - 2026-03-20
+- Modified RemiDictionary.xlsx
+

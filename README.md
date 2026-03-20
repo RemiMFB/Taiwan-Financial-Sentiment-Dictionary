@@ -23,18 +23,20 @@ Paper Abstract:
   - `TopicInterestRate.xlsx` — Topic lexicon: Interest Rate (利率議題字詞)
   - `TopicMonetaryPolicy.xlsx` — Topic lexicon: Monetary Policy (貨幣政策議題字詞)
   - `TopicPrice.xlsx` — Topic lexicon: Price (物價議題字詞)
+- Data files live in `data/Source Up to 2025/`:
+  - `RemiDictionary.xlsx` — Main financial sentiment dictionary (財經情緒字典)
 
 
 ## Versioning & release schedule
-- **Scheme**: `2025.09.03` (`YYYY.MM.PATCH`). Year–month reflect the release window; PATCH increments for hotfixes that do not change definitions.
+- **Scheme**: `2026.03.20` (`YYYY.MM.PATCH`). Year–month reflect the release window; PATCH increments for hotfixes that do not change definitions.
 - **Schedule**: Annual releases (on March). Event-driven hotfixes are allowed.
 - **Frozen archives**: Every release is tagged and published on GitHub Releases. Users can cite a specific version for replication.
 - **Changelog**: See `CHANGELOG.md` for human-readable changes.
 
 ## Citation & DOI
 -  [![DOI](https://zenodo.org/badge/1052554974.svg)](https://doi.org/10.5281/zenodo.17076771
--  黃裕烈 (2025), 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, 論文手稿.
--  Huang, Yu-Lieh (2025), Taiwanese Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Construction and Evaluation, Manuscript.
+-  黃裕烈 (2025), 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, 經濟論文.
+-  Huang, Yu-Lieh (2025), Taiwanese Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Construction and Evaluation, Academia Economic Papers.
 
 Also provide citation metadata in `CITATION.cff`.
 
