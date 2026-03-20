@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this dataset or dictionaries, please cite it as below."
-title: "Taiwanese Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Construction and Evaluation"
+title: "The Taiwan Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Collaboration and Classification Evaluation"
 title-translated:
   zh: "台灣財經情緒字典與議題分類字詞之編製與應用：大型語言模型之協作與分類評估"
 authors:

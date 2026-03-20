@@ -16,6 +16,8 @@ Paper Abstract:
 
 ## Quick start
 - Download the current release from the **Releases** page once you publish this repo.
+- Data files live in `data/Source Up to 2025/`:
+  - `RemiDictionary.xlsx` — Main financial sentiment dictionary (財經情緒字典)
 - Data files live in `data/Source Up to 2024/`:
   - `RemiDictionary.xlsx` — Main financial sentiment dictionary (財經情緒字典)
   - `TopicExchangeRate.xlsx` — Topic lexicon: Exchange Rate (匯率議題字詞)
@@ -23,8 +25,6 @@ Paper Abstract:
   - `TopicInterestRate.xlsx` — Topic lexicon: Interest Rate (利率議題字詞)
   - `TopicMonetaryPolicy.xlsx` — Topic lexicon: Monetary Policy (貨幣政策議題字詞)
   - `TopicPrice.xlsx` — Topic lexicon: Price (物價議題字詞)
-- Data files live in `data/Source Up to 2025/`:
-  - `RemiDictionary.xlsx` — Main financial sentiment dictionary (財經情緒字典)
 
 
 ## Versioning & release schedule
@@ -36,8 +36,8 @@ Paper Abstract:
 ## Citation & DOI
 -  [![DOI](https://zenodo.org/badge/1052554974.svg)](https://doi.org/10.5281/zenodo.17076771
 -  黃裕烈 (2025), 台灣財經情緒字典與議題分類字詞之編製與應用:大型語言模型之協作與分類評估, 經濟論文.
--  Huang, Yu-Lieh (2025), Taiwanese Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Construction and Evaluation, Academia Economic Papers.
-
+-  Huang, Yu-Lieh (2025), The Taiwan Financial Sentiment Dictionary and Topic-Classification Lexicons: LLM-Assisted Collaboration and Classification Evaluation, Academia Economic Papers.
+                          
 Also provide citation metadata in `CITATION.cff`.
 
 ## Licenses
@@ -66,10 +66,16 @@ flowchart LR
 ```r
 library(openxlsx)
 library(stringr)
-rPathFile= "data/Source Up to 2024/RemiDictionary.xlsx"
+rPathFile= "data/Source Up to 2025/RemiDictionary.xlsx"
 sentence = "亞洲方面，日本因經濟復甦漸趨明朗，日本央行於八月間結束零利率政策，將無擔保隔夜拆款利率的操作目標調高至Ｏ．二五%，惟因通貨緊縮現象暫難消除，寬鬆貨幣政策的立場仍然不變；"
 Positive = read.xlsx(rPathFile, "Positive")[, 1]
+positive = read.xlsx(rPathFile, "Negation of a Negative")[, 1]
 Negative = read.xlsx(rPathFile, "Negative")[, 1]
+negative = read.xlsx(rPathFile, "Negation of a Positive")[, 1]
+Positive = c(positive, Positive)
+Positive = Positive[order(nchar(Positive), decreasing = TRUE)]
+Negative = c(negative, Negative)
+Negative = Negative[order(nchar(Negative), decreasing = TRUE)]
 
 # 計算情感詞的函數
 CountSentiment = function(str_v, sentiment_v, replace_c = '***'){
@@ -97,11 +103,14 @@ import pandas as pd
 import re
 
 # 讀取 Excel 中的字典
-rPathFile = "data/Source Up to 2024/RemiDictionary.xlsx"
-positive_words = pd.read_excel(rPathFile, sheet_name="Positive").iloc[:, 0].tolist()
-negative_words = pd.read_excel(rPathFile, sheet_name="Negative").iloc[:, 0].tolist()
-
-sentence = "亞洲方面，日本因經濟復甦漸趨明朗，日本央行於八月間結束零利率政策，將無擔保隔夜拆款利率的操作目標調高至Ｏ．二五%，惟因通貨緊縮現象暫難消除，寬鬆貨幣政策的立場仍然不變；"
+rPathFile = "data/Source Up to 2025/RemiDictionary.xlsx"
+Positive  = pd.read_excel(rPathFile, sheet_name="Positive").iloc[:, 0].tolist()
+positive  = pd.read_excel(rPathFile, sheet_name="Negation of a Negative").iloc[:, 0].tolist()
+Negative  = pd.read_excel(rPathFile, sheet_name="Negative").iloc[:, 0].tolist()
+negative  = pd.read_excel(rPathFile, sheet_name="Negation of a Positive").iloc[:, 0].tolist()
+Positive  = sorted(positive + Positive, key=len, reverse=True)
+Negative  = sorted(negative + Negative, key=len, reverse=True)
+sentence  = "亞洲方面，日本因經濟復甦漸趨明朗，日本央行於八月間結束零利率政策，將無擔保隔夜拆款利率的操作目標調高至Ｏ．二五%，惟因通貨緊縮現象暫難消除，寬鬆貨幣政策的立場仍然不變；"
 
 # 計算情感詞的函數
 def count_sentiment(str_v, sentiment_v, replace_c='***'):
@@ -113,8 +122,8 @@ def count_sentiment(str_v, sentiment_v, replace_c='***'):
     return result
 
 # 計算正面和負面詞的數量
-n_positive = count_sentiment(sentence, positive_words)
-n_negative = count_sentiment(sentence, negative_words)
+n_positive = count_sentiment(sentence, Positive)
+n_negative = count_sentiment(sentence, Negative)
 
 print(f"正面詞數量: {n_positive}")
 print(f"負面詞數量: {n_negative}")
