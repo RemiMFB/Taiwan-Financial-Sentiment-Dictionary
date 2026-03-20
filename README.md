@@ -52,11 +52,12 @@ flowchart LR
   C --> D(Validation metrics: accuracy / F1)
   D --> E(Release + tag + changelog)
 ```
-- Full details are in `WORKFLOW.md`, including checkpoints, error metrics, and QA steps.
+<!-- - Full details are in `WORKFLOW.md`, including checkpoints, error metrics, and QA steps. -->
 
 ## Governance & deprecation policy
+<!--
 - Rules for retiring obsolete terms and blocking short-lived buzzwords are in `POLICY.md`.
-- Contributions follow `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`.
+- Contributions follow `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`.-->
 - Use GitHub Issues to propose new terms; each term should include source examples and justification.
 
 ## Download formats
