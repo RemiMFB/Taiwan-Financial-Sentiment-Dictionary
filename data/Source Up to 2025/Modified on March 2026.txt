@@ -1,0 +1,4 @@
+Modified on March, 2026
+(1) 增加 Negation (見 Negation of a Positive; Negation of a Negative)
+(2) 加入一些字在 Negative or Positive (見 Added)
+(3) 刪除一些 "XXX的" 的字 (見 Deprecated)
